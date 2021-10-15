@@ -50,7 +50,7 @@ namespace AddressBook
              email = Console.ReadLine();
                arlist.Add(email);
 
-           // arlist.AddRange(firstName, lastName, address, state, zipCode, phoneNumber, email);
+          //arlist.AddRange(firstName, lastName, address, state, zipCode, phoneNumber, email);
         }
 
         public void  putDetails() // displaying contact details
@@ -68,5 +68,33 @@ namespace AddressBook
 
         }
 
+        public void editContact()
+        {
+            Console.WriteLine("enter the name which want to edit contact:\n");
+            string name = Console.ReadLine();
+            
+                if (arlist.Contains(name))
+                {
+
+                GetContactDetails();
+                
+
+                }
+            arlist.SetRange(0, arlist);
+
+        }
+
+      /*  public void removeContact()
+        {
+
+            Console.WriteLine("enter the name you want to remove");
+            string name = Console.ReadLine();
+            if (arlist.Contains(name))
+            {
+                arlist.Remove(name);
+            }
+
+
+        }*/
     }
 }

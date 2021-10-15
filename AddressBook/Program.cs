@@ -36,11 +36,11 @@ namespace AddressBook
                         break;
 
                     case 3:
-                        /// Edit Contact
+                        bookClass.editContact();
                         break;
 
                     case 4:
-                        /// Remove Contact
+                       // bookClass.removeContact();
                         break;
 
                     default:
