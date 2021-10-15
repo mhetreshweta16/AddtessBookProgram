@@ -84,7 +84,7 @@ namespace AddressBook
 
         }
 
-      /*  public void removeContact()
+       public void removeContact()
         {
 
             Console.WriteLine("enter the name you want to remove");
@@ -95,6 +95,6 @@ namespace AddressBook
             }
 
 
-        }*/
+        }
     }
 }

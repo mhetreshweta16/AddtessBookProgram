@@ -40,7 +40,7 @@ namespace AddressBook
                         break;
 
                     case 4:
-                       // bookClass.removeContact();
+                        bookClass.removeContact();
                         break;
 
                     default:
