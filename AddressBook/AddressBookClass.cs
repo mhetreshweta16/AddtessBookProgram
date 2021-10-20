@@ -13,11 +13,7 @@ namespace AddressBook
         /// The address book
         /// </summary>
         private LinkedList<ContactList> addressBook = new LinkedList<ContactList>();  //here created the empty LinkedList object 
-        public AddressBookClass()
-        {
-            
-
-        }
+        
 
         public string firstName;
         public string lastName;
@@ -32,34 +28,36 @@ namespace AddressBook
         /// </summary>
         public void GetContactDetails()   // creating contact details of person
         {
-            ContactList contactList = new ContactList(firstName,lastName,address,state,zipCode,phoneNumber,email);
+            
 
             Console.WriteLine("Enter the First Name");
-            contactList.firstName = Console.ReadLine();
+            firstName = Console.ReadLine();
 
             Console.WriteLine("Enter the Last Name");
-            contactList.lastName = Console.ReadLine();
+            lastName = Console.ReadLine();
 
             Console.WriteLine("Enter the Adresss");
-            contactList.address[0] = Console.ReadLine();
+            address[0] = Console.ReadLine();
 
 
 
             Console.WriteLine("Enter the State");
-            contactList.state = Console.ReadLine();
+            state = Console.ReadLine();
 
 
             Console.WriteLine("Enter the Zip Code");
-            contactList.zipCode = Convert.ToInt32(Console.ReadLine());
+            zipCode = Convert.ToInt32(Console.ReadLine());
 
 
             Console.WriteLine("Enter the Phone Number");
 
-            contactList.phoneNumber = Convert.ToInt64(Console.ReadLine());
+           phoneNumber = Convert.ToInt64(Console.ReadLine());
 
 
             Console.WriteLine("Enter the Email");
-            contactList.email = Console.ReadLine();
+            email = Console.ReadLine();
+
+            ContactList contactList = new ContactList(firstName, lastName, address, state, zipCode, phoneNumber, email);
 
 
             this.addressBook.AddLast(contactList);
@@ -163,6 +161,7 @@ namespace AddressBook
                     if (contactList.firstName == name)
                     {
                         addressBook.Remove(contactList);
+                        break;
 
                     }
                     else
