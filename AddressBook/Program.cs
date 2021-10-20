@@ -12,6 +12,7 @@ namespace AddressBook
 
             do
             {
+                
                 Console.WriteLine("Welcome to Address Book");
                 Console.WriteLine("1.AddNewContact\n2.ShowContact\n3.EditContact\n4.RmoveContact");
                 Console.WriteLine("\nEnter your choice");
@@ -22,17 +23,15 @@ namespace AddressBook
                 {
 
                     case 1:
-                        Console.WriteLine("\nhow many contact you want to add");
+                        Console.WriteLine("how many contact you want to add:");
                         int n = Convert.ToInt32(Console.ReadLine());
                         for (int i = 0; i < n; i++)
                         {
                             bookClass.GetContactDetails();
-                            Console.WriteLine("\n");    //through object accessing method 
-
                         }
                         break;
                     case 2:
-                        bookClass.putDetails();
+                        bookClass.ContactDetails();
                         break;
 
                     case 3:
@@ -46,12 +45,12 @@ namespace AddressBook
                     default:
                         break;
                 }
-                Console.WriteLine("do you want to continue? press...y/n");
+                Console.WriteLine("\ndo you want to continue? press...y/n");
                 y = Console.ReadLine();
 
+            
             } while (yes == y);
-
-           Console.ReadLine();
+            Console.ReadLine();
 
 
         }

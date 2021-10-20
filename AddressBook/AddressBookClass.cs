@@ -7,94 +7,175 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {
-    class AddressBookClass
+  public  class AddressBookClass
     {
-        string firstName;
-        string lastName;
-        string[] address = new string[2];
-        string state;
-        int zipCode;
-        long phoneNumber;
-       string email;
-        ArrayList arlist = new ArrayList();
+        /// <summary>
+        /// The address book
+        /// </summary>
+        private LinkedList<ContactList> addressBook = new LinkedList<ContactList>();  //here created the empty LinkedList object 
+        public AddressBookClass()
+        {
+            
+
+        }
+
+        public string firstName;
+        public string lastName;
+        public string[] address = new string[2];
+        public string state;
+        public int zipCode;
+        public long phoneNumber;
+        public string email;
+
+        /// <summary>
+        /// Gets the contact details.
+        /// </summary>
         public void GetContactDetails()   // creating contact details of person
         {
-           
+            ContactList contactList = new ContactList(firstName,lastName,address,state,zipCode,phoneNumber,email);
+
             Console.WriteLine("Enter the First Name");
-            firstName = Console.ReadLine();
-          arlist.Add(firstName);
+            contactList.firstName = Console.ReadLine();
 
             Console.WriteLine("Enter the Last Name");
-           lastName = Console.ReadLine();
-           arlist.Add(lastName);
+            contactList.lastName = Console.ReadLine();
 
             Console.WriteLine("Enter the Adresss");
-            address[0] = Console.ReadLine();
-           arlist.Add(address[0]);
+            contactList.address[0] = Console.ReadLine();
+
 
 
             Console.WriteLine("Enter the State");
-             state = Console.ReadLine();
-               arlist.Add(state);
+            contactList.state = Console.ReadLine();
+
 
             Console.WriteLine("Enter the Zip Code");
-             zipCode = Convert.ToInt32(Console.ReadLine());
-            arlist.Add(zipCode);
+            contactList.zipCode = Convert.ToInt32(Console.ReadLine());
+
 
             Console.WriteLine("Enter the Phone Number");
-            
-             phoneNumber = Convert.ToInt64(Console.ReadLine());
-             arlist.Add(phoneNumber);
+
+            contactList.phoneNumber = Convert.ToInt64(Console.ReadLine());
+
 
             Console.WriteLine("Enter the Email");
-             email = Console.ReadLine();
-               arlist.Add(email);
+            contactList.email = Console.ReadLine();
 
-          //arlist.AddRange(firstName, lastName, address, state, zipCode, phoneNumber, email);
-        }
 
-        public void  putDetails() // displaying contact details
-        {
+            this.addressBook.AddLast(contactList);
+
            
-            Console.WriteLine("\n====The Contact Details===\n");
-
-            for (int i = 0; i < arlist.Count; i++)
-            {
-                
-                Console.Write(arlist[i] + "  ");
-                Console.WriteLine("\n");
-                
-            }  
-
         }
-
-        public void editContact()
+        
+        public void ContactDetails()  //Displaying contact details
         {
-            Console.WriteLine("enter the name which want to edit contact:\n");
-            string name = Console.ReadLine();
-            
-                if (arlist.Contains(name))
-                {
 
-                GetContactDetails();
-                
+            if (addressBook.Count == 0)  //here checking in List there is contact or not  if no the lis is empty
+            {
+                Console.WriteLine("AddressBook is Empty");   
+
+            }
+            else   //else it will display the details of contact person
+            {
+                foreach (ContactList contactList in this.addressBook)
+                {
+                    Console.WriteLine($"FirstName= {contactList.firstName} LastName= {contactList.lastName} Address= {contactList.address} state= {contactList.state} ZipCode= {contactList.zipCode} Phone= {contactList.phoneNumber} Email= {contactList.email}");
 
                 }
-            arlist.SetRange(0, arlist);
-
+            }
+        
         }
 
-       public void removeContact()
-        {
 
-            Console.WriteLine("enter the name you want to remove");
-            string name = Console.ReadLine();
-            if (arlist.Contains(name))
+      public void editContact()  //for editing the contact list
+        {
+            
+            if (addressBook.Count == 0)   // here checking in List there is contact or not  if no the lis is empty
             {
-                arlist.Remove(name);
+                Console.WriteLine("AddressBook is Empty");
+
+            }
+            else  //else it will edit the contact details 
+            {
+                Console.WriteLine("enter the name which want to edit contact:");
+                string name = Console.ReadLine();
+
+                foreach (ContactList contactList in this.addressBook)
+                {
+
+                    if (contactList.firstName == name)
+                    {
+                        Console.WriteLine($"FirstName= {contactList.firstName} LastName= {contactList.lastName} Address= {contactList.address} state= {contactList.state} ZipCode= {contactList.zipCode} Phone= {contactList.phoneNumber} Email= {contactList.email}");
+                        Console.WriteLine("\nthe {0} is present you can edit the details...",contactList.firstName);
+                        Console.WriteLine("enter the details");
+
+                        Console.WriteLine("Enter the First Name");
+                        contactList.firstName = Console.ReadLine();
+
+                        Console.WriteLine("Enter the Last Name");
+                        contactList.lastName = Console.ReadLine();
+
+                        Console.WriteLine("Enter the Adresss");
+                        contactList.address[0] = Console.ReadLine();
+
+                        Console.WriteLine("Enter the State");
+                        contactList.state = Console.ReadLine();
+
+                        Console.WriteLine("Enter the Zip Code");
+                        contactList.zipCode = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Enter the Phone Number");
+                        contactList.phoneNumber = Convert.ToInt64(Console.ReadLine());
+
+                        Console.WriteLine("Enter the Email");
+                        contactList.email = Console.ReadLine();
+
+                        Console.WriteLine("updeted detalis List");
+                        Console.WriteLine($"FirstName= {contactList.firstName} LastName= {contactList.lastName} Address= {contactList.address} state= {contactList.state} ZipCode= {contactList.zipCode} Phone= {contactList.phoneNumber} Email= {contactList.email}");
+
+                    }
+                    else
+                    {
+
+                        Console.WriteLine("the {0} is not present in ContactList", contactList.firstName);
+
+                    }
+
+                }
+            }
+        }
+
+        public void removeContact()    // for removing the contact 
+        {
+            if (addressBook.Count == 0)      // here checking in List there is contact or not  if no the list is empty
+            {
+                Console.WriteLine("AddressBook is Empty");
+
+            }
+            else   // it will remove the contact from contact list
+            {
+                Console.WriteLine("enter the name you want to remove");
+                string name = Console.ReadLine();
+
+                foreach (ContactList contactList in this.addressBook)
+                {
+
+                    if (contactList.firstName == name)
+                    {
+                        addressBook.Remove(contactList);
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("the {0} is not present", contactList.firstName);
+                    
+                    }
+                }
+
             }
 
-
         }
+
+
     }
 }
