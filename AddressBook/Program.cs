@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AddressBook
 {
@@ -9,6 +10,15 @@ namespace AddressBook
             AddressBookClass bookClass = new AddressBookClass(); // creating object of class
             string yes = "y";
             string y;
+            
+
+            Console.WriteLine("enter the address book name");
+            string bookName = Console.ReadLine();
+           
+            Dictionary<AddressBookClass, string> dic = new Dictionary<AddressBookClass, string>();
+            dic.Add(bookClass, bookName);
+            display(dic);
+
 
             do
             {
@@ -52,7 +62,17 @@ namespace AddressBook
             } while (yes == y);
             Console.ReadLine();
 
+            
 
+        }
+        
+        public static void display(Dictionary<AddressBookClass, string> dic)
+        {
+            foreach (var e in dic)
+            {
+                Console.WriteLine("the address Book are");
+                Console.WriteLine(e.Value);
+            }
         }
     }
 }

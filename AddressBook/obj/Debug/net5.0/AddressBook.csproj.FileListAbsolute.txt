@@ -1,0 +1,16 @@
+E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\AddressBook.exe
+E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\AddressBook.deps.json
+E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\AddressBook.runtimeconfig.json
+E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\AddressBook.runtimeconfig.dev.json
+E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\AddressBook.dll
+E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\ref\AddressBook.dll
+E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\AddressBook.pdb
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.csproj.AssemblyReference.cache
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.GeneratedMSBuildEditorConfig.editorconfig
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.AssemblyInfoInputs.cache
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.AssemblyInfo.cs
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.csproj.CoreCompileInputs.cache
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.dll
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\ref\AddressBook.dll
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.pdb
+E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.genruntimeconfig.cache
