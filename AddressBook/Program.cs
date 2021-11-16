@@ -39,6 +39,8 @@ namespace AddressBook
                         {
                             bookClass.GetContactDetails();
                         }
+                        //AddressBookFileOperation.JsonSerialize();
+
                         break;
                     case 2:
                         bookClass.ContactDetails();
@@ -60,6 +62,7 @@ namespace AddressBook
 
             
             } while (yes == y);
+            AddressBookFileOperation.JsonDeserialize();
             Console.ReadLine();
 
             

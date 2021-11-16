@@ -26,15 +26,14 @@ namespace AddressBook
         /// <summary>
         /// Gets the contact details.
         /// </summary>
-
-        
+   
         public void GetContactDetails()   // creating contact details of person
         {
             
 
             Console.WriteLine("Enter the First Name");
             firstName = Console.ReadLine();
-            
+           
 
             Console.WriteLine("Enter the Last Name");
             lastName = Console.ReadLine();
@@ -64,8 +63,10 @@ namespace AddressBook
 
 
             this.addressBook.AddLast(contactList);
+            AddressBookFileOperation.JsonSerialize(addressBook);
 
-           
+
+
         }
         
         public void ContactDetails()  //Displaying contact details
