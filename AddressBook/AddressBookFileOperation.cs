@@ -10,7 +10,7 @@ namespace AddressBook
 {
    public static class AddressBookFileOperation
     {
-        public static void JsonSerialize(LinkedList<ContactList> addressBook)
+        public static void JsonSerializeAddressBook(LinkedList<ContactList> addressBook)
         {
             string jsonPath = @"E:\VisualBasic Problems\AddressBook\AddressBook\Files\JsonFile.json";
             //contact contact = new contact() { Id = 11, firstName = "shweta", lastName = "mhetre" };
@@ -22,7 +22,7 @@ namespace AddressBook
             File.WriteAllText(jsonPath, result);
         }
 
-        public static void JsonDeserialize()
+        public static void JsonDeserializeAddressBook()
         {
             try
             {

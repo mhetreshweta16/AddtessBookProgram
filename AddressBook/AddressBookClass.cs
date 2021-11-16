@@ -63,7 +63,7 @@ namespace AddressBook
 
 
             this.addressBook.AddLast(contactList);
-            AddressBookFileOperation.JsonSerialize(addressBook);
+            AddressBookFileOperation.JsonSerializeAddressBook(addressBook);
 
 
 
