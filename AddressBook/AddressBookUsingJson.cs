@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {
-    public static class AddressBookFileOperation
+    public  class AddressBookUsingJson
     {
         public static void JsonSerializeAddressBook(LinkedList<ContactList> addressBook)
         {

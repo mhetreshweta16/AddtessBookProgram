@@ -61,8 +61,11 @@ namespace AddressBook
             
             } while (yes == y);
             Console.ReadLine();
+            //Display contacts using StreamReader UC13
+            AddressBookFileOperations.ReadAddressBookUsingStreamReader();
 
-            
+
+
 
         }
         
