@@ -64,8 +64,10 @@ namespace AddressBook
 
 
             this.addressBook.AddLast(contactList);
+            AddressBookFileOperation.JsonSerializeAddressBook(addressBook);
 
-           
+
+
         }
         
         public void ContactDetails()  //Displaying contact details
