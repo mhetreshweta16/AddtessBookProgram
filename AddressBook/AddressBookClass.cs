@@ -66,8 +66,10 @@ namespace AddressBook
             this.addressBook.AddLast(contactList);
 
             //for File Operations
-            AddressBookFileOperations.WriteAddressBookUsingStreamWriter(firstName, lastName, address, state, zipCode, phoneNumber, email);
+            // AddressBookFileOperations.WriteAddressBookUsingStreamWriter(firstName, lastName, address, state, zipCode, phoneNumber, email);
 
+            //For Csv operations
+            AddressBookUsingCSV.CsvSerialise(addressBook);
 
             //For Json File
             //AddressBookUsingJson.JsonSerializeAddressBook(addressBook);

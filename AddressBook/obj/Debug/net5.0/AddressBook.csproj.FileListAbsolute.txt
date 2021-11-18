@@ -17,3 +17,4 @@ E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.gen
 E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\Newtonsoft.Json.dll
 E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 E:\VisualBasic Problems\AddressBook\AddressBook\obj\Debug\net5.0\AddressBook.csproj.CopyComplete
+E:\VisualBasic Problems\AddressBook\AddressBook\bin\Debug\net5.0\CsvHelper.dll
